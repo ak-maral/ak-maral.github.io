@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Task Manager</title>
+</head>
+<body>
+    <!-- Authentication Container -->
+    <div id="authContainer" class="container">
+        <h1>Task Manager</h1>
+        
+        <!-- Login Form -->
+        <form id="loginForm" class="fade-in">
+            <label for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" required>
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" required>
+            <button type="submit">Log In</button>
+            <p>Don't have an account? <button id="showSignupFormButton">Sign Up</button></p>
+        </form>
+
+        <!-- Sign-up form initially hidden -->
+        <form id="signupForm" class="fade-in" style="display: none;">
+            <label for="signupUsername">Username:</label>
+            <input type="text" id="signupUsername" required>
+            <label for="signupPassword">Password:</label>
+            <input type="password" id="signupPassword" required>
+            <label for="signupPasswordConfirm">Confirm Password:</label>
+            <input type="password" id="signupPasswordConfirm" required>
+            <button type="submit">Sign Up</button>
+            <p>Already have an account? <button id="showLoginFormButton">Log In</button></p>
+        </form>
+    </div>
+
+    <!-- Task Container -->
+    <div id="taskContainer" class="container" style="display: none;">
+        <h1>Task Manager</h1>
+        
+        <!-- Task Filtering Dropdown -->
+        <div class="fade-in">
+            <label>Filter Tasks:</label>
+            <select id="taskFilter">
+                <option value="all">All Tasks</option>
+                <option value="completed">Completed Tasks</option>
+                <option value="active">Active Tasks</option>
+            </select>
+        </div>
+        
+        <!-- Task List -->
+        <ul id="taskList" class="fade-in"></ul>
+
+        <!-- Add Task Button -->
+        <button id="showTaskFormButton" class="fade-in">Add Task</button>
+
+        <!-- Task Modal -->
+        <div id="taskModal" class="modal">
+            <div class="modal-content fade-in">
+                <span class="close" id="closeTaskFormButton">&times;</span>
+                <!-- Task Form -->
+                <form id="taskForm" style="display: none;" >
+                    <label for="taskTitle">Task Title:</label>
+                    <input type="text" id="taskTitle" required>
+                    <label for="taskDescription">Task Description:</label>
+                    <textarea id="taskDescription"></textarea>
+                    <button type="submit">Add Task</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Logout Button -->
+        <button id="logoutButton" class="fade-in">Log Out</button>
+    </div>
+
+    <!-- JavaScript Scripts -->
+    <script src="js/tasks.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
+
+
+

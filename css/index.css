@@ -1,0 +1,7 @@
+/* main.css */
+@import 'general.css';
+@import 'form.css';
+@import 'buttons.css';
+@import 'header.css';
+@import 'task-list.css';
+@import 'media-queries.css';
